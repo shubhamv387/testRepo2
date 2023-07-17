@@ -33,18 +33,23 @@
           <li class="list-group-item">Item 2</li>
           <li class="list-group-item">Item 3</li>
           <li class="list-group-item">Item 4</li>
+          <li>Item 5</li>
         </ul>
       </div>
     </div>
-    <script>
-      var headerTitle = document.querySelector("#header-title");
-      var addItem = document.querySelector(".title");
 
-      //console.log(headerTitle);
-      headerTitle.style.borderBottom = "solid 3px #000";
-      addItem.style.color = "green";
-      addItem.style.fontWeight = "bold";
-      addItem.style.textTransform = "uppercase";
+    <script>
+      var liByClass = document.getElementsByClassName("list-group-item");
+      var liByTage = document.getElementsByTagName("li");
+
+      // changing Background Color using classname
+      for (let i = 0; i < liByClass.length; i++) {
+        liByClass[i].style.background = "#ccc";
+      }
+      // changing Font Weight using Tag Name
+      for (let i = 0; i < liByTage.length; i++) {
+        liByTage[i].style.fontWeight = "bold";
+      }
     </script>
   </body>
 </html>
