@@ -33,22 +33,29 @@
           <li class="list-group-item">Item 2</li>
           <li class="list-group-item">Item 3</li>
           <li class="list-group-item">Item 4</li>
-          <li>Item 5</li>
+          <li class="list-group-item">Item 5</li>
+          <li class="list-group-item">Item 6</li>
+          <li class="list-group-item">Item 7</li>
+          <li class="list-group-item">Item 8</li>
+          <li class="list-group-item">Item 9</li>
+          <li class="list-group-item">Item 10</li>
         </ul>
       </div>
     </div>
 
     <script>
-      var liByClass = document.getElementsByClassName("list-group-item");
-      var liByTage = document.getElementsByTagName("li");
+      // QUERYSELECTOR
+      var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+      var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
+      secondItem.style.background = "green";
+      thirdItem.style.display = "none";
 
-      // changing Background Color using classname
-      for (let i = 0; i < liByClass.length; i++) {
-        liByClass[i].style.background = "#ccc";
-      }
-      // changing Font Weight using Tag Name
-      for (let i = 0; i < liByTage.length; i++) {
-        liByTage[i].style.fontWeight = "bold";
+      // QUERYSELECTORALL
+      var liByquerySelectorAll = document.querySelectorAll("li");
+      liByquerySelectorAll[1].style.color = "green";
+      var odd = document.querySelectorAll("li:nth-child(odd)");
+      for (let i = 0; i < odd.length; i++) {
+        odd[i].style.background = "green";
       }
     </script>
   </body>
